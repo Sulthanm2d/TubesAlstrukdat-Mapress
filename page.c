@@ -83,7 +83,7 @@ void StartGame(){
 void LoadGame(){
 	char Map[100];
 	
-	printf("Enter file name that you want to load: ");
+	printf("Enter the file name that you want to load: ");
 	scanf("%s", Map);
 	BacaMap(Map);
 	
