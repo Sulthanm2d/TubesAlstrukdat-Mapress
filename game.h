@@ -30,7 +30,7 @@ extern MATRIKS dapur;		//map tempat pesanan diambbil, 	ADT Matriks
 extern List antre;			//antrean pelanggan, 			ADT Queue
 extern TabInt pesanan;		//jenis pesanan, 				ADT Array
 extern point player;		//posisi pemain					ADT Point
-
+extern char Map;		//.txt berisi seluruh kejadian (nama, waktu, rTamu/rDapur, hand, antre, pesanan, player)
 
 /* Inisialisasi */
 	//komentar pribadi -suta, inisialisasi di driver
@@ -68,7 +68,14 @@ void GIVE(Stack hand, Customer c);
 
 
 /* Gameplay */
-void EXIT();
+void StartGame();
+//Jalanin gamenya
+void BacaMap(char *Map);
+//Membaca Map (bukan menulis map), jadi tau nama = siapa, nyawa = berapa, posisi = di mana, dll
+void TulisMap(Map);
+//Menuliskan ke layar semua yg di BacaMap
+
+/* void EXIT(); <== udah aku masukin di page.h dan page.c -Sul */
 
 #endif
 
